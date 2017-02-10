@@ -165,7 +165,7 @@ def save_model_weights(generator_model, discriminator_model, DCGAN_model, e):
         DCGAN_model.save_weights(DCGAN_weights_path, overwrite=True)
 
 
-def plot_generated_batch(X_real, generator_model, batch_size, noise_dim, image_dim_ordering, noise_scale=0.5, e):
+def plot_generated_batch(X_real, generator_model, batch_size, noise_dim, image_dim_ordering, e, noise_scale=0.5):
 
     # Generate images
     X_gen = sample_noise(noise_scale, batch_size, noise_dim)
