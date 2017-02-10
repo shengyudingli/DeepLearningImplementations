@@ -142,7 +142,7 @@ def train(**kwargs):
             # Save images for visualization ~2 times per epoch
             if batch_counter % (n_batch_per_epoch / 2) == 0:
                 data_utils.plot_generated_batch(X_real_batch, generator_model,
-                                                batch_size, noise_dim, image_dim_ordering)
+                                                batch_size, noise_dim, image_dim_ordering, e)
 
         print('\nEpoch %s/%s, Time: %s' % (e + 1, nb_epoch, time.time() - start))
 
